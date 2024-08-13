@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend:
+    build: ./frontend
+    container_name: vue_frontend
+    ports:
+      - "8080:8080"
+
+  nginx:
+    build: ./nginx
+    container_name: nginx_server
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend

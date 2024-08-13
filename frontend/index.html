@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js App</title>
+    <!-- Import Vue.js từ CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <ul>
+            <li v-for="item in items" :key="item.id">
+                {{ item.name }} - {{ item.description }}
+            </li>
+        </ul>
+    </div>
+
+    <!-- Import file JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
