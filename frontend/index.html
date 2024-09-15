@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue.js App</title>
-    <!-- Import Vue.js từ CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- Import Vue.js từ CDN (Vue 3) -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
     <div id="app">
         <h1>{{ title }}</h1>
         <ul>
             <li v-for="item in items" :key="item.id">
+                <!-- Chỉ hiển thị nút nếu status khác rỗng -->
+                <button v-if="item.status !== ''">Status</button>
                 {{ item.name }} - {{ item.description }}
             </li>
         </ul>
